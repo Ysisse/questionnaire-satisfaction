@@ -1,0 +1,92 @@
+<div class="row" id="question_page_10" style="display: none;">
+    <div class="col-sm-12" style="padding: 0">
+        <label> 10 - L’accompagnement par l’assistante sociale :</label>
+    </div>
+    <div class="col-sm-12">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-10">
+            <div class="col-sm-12 row" style="margin-top: 1%;">
+                <div class="col-sm-8">
+                    <label style="margin-right: 3%;">J’ai connaissance de la présence de l’assistante sociale dans l’établissement dès mon arrivée ? </label>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-check-inline">
+                        <label class="form-check-label">
+                            <input type="radio" class="form-check-input" value="Oui" name="connaissancePresence_accompagnement_assistanceSociale" > Oui
+                        </label>
+                    </div>
+                    <div class="form-check-inline">
+                        <label class="form-check-label">
+                            <input type="radio" class="form-check-input" value="Non" name="connaissancePresence_accompagnement_assistanceSociale" > Non
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 row">
+                <div class="col-sm-8">
+                    <label style="margin-right: 3%;">J’ai bénéficié d’un accompagnement de l’assistante sociale ? </label>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-check-inline">
+                        <label class="form-check-label">
+                            <input type="radio" class="form-check-input" value="Oui" name="beneficieAccompagnement_accompagnement_assistanceSociale" onchange="document.getElementById('satisfaction_accompagnement_assistanceSociale').style.display = '';"> Oui
+                        </label>
+                    </div>
+                    <div class="form-check-inline">
+                        <label class="form-check-label">
+                            <input type="radio" class="form-check-input" value="Non" name="beneficieAccompagnement_accompagnement_assistanceSociale" onchange="document.getElementById('satisfaction_accompagnement_assistanceSociale').style.display = 'none';"> Non
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12" style="margin-top: 1%;display: none" id="satisfaction_accompagnement_assistanceSociale">
+                <label>Estimez votre degré de satisfaction :</label>
+                <table class="table table-sm" style="width: 120%;text-align: center;">
+                    <thead>
+                        <tr>
+                            <td style="text-align: initial; padding-top: 2%;">Je suis satisfait(e)</td>
+                            <td>Tout à fait d'accord</td>
+                            <td>D'accord</td>
+                            <td>Pas d'accord</td>
+                            <td>Non Concerné</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="text-align: initial">de l’accompagnement réalisé par l’assistante sociale</td>
+                            <td><input type="radio" class="form-check-input" value="Tout à fait d'accord" name="accompagnementRealise_accompagnement_assistanceSociale"  style="padding: 0;margin: 0;margin-top: 0.3rem;"></td>
+                            <td><input type="radio" class="form-check-input" value="D'accord" name="accompagnementRealise_accompagnement_assistanceSociale"  style="padding: 0;margin: 0;margin-top: 0.3rem;"></td>
+                            <td><input type="radio" class="form-check-input" value="Pas d'accord" name="accompagnementRealise_accompagnement_assistanceSociale"  style="padding: 0;margin: 0;margin-top: 0.3rem;"></td>
+                            <td><input type="radio" class="form-check-input" value="Non Concerné" name="accompagnementRealise_accompagnement_assistanceSociale"  style="padding: 0;margin: 0;margin-top: 0.3rem;"></td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: initial">de l’écoute de l’assistante sociale</td>
+                            <td><input type="radio" class="form-check-input" value="Tout à fait d'accord" name="ecouteAssistanceSociale_accompagnement_assistanceSociale"  style="padding: 0;margin: 0;margin-top: 0.3rem;"></td>
+                            <td><input type="radio" class="form-check-input" value="D'accord" name="ecouteAssistanceSociale_accompagnement_assistanceSociale"  style="padding: 0;margin: 0;margin-top: 0.3rem;"></td>
+                            <td><input type="radio" class="form-check-input" value="Pas d'accord" name="ecouteAssistanceSociale_accompagnement_assistanceSociale"  style="padding: 0;margin: 0;margin-top: 0.3rem;"></td>
+                            <td><input type="radio" class="form-check-input" value="Non Concerné" name="ecouteAssistanceSociale_accompagnement_assistanceSociale"  style="padding: 0;margin: 0;margin-top: 0.3rem;"></td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: initial">de la clarté des explications de l’assistante sociale</td>
+                            <td><input type="radio" class="form-check-input" value="Tout à fait d'accord" name="clarteExplications_accompagnement_assistanceSociale"  style="padding: 0;margin: 0;margin-top: 0.3rem;"></td>
+                            <td><input type="radio" class="form-check-input" value="D'accord" name="clarteExplications_accompagnement_assistanceSociale"  style="padding: 0;margin: 0;margin-top: 0.3rem;"></td>
+                            <td><input type="radio" class="form-check-input" value="Pas d'accord" name="clarteExplications_accompagnement_assistanceSociale"  style="padding: 0;margin: 0;margin-top: 0.3rem;"></td>
+                            <td><input type="radio" class="form-check-input" value="Non Concerné" name="clarteExplications_accompagnement_assistanceSociale"  style="padding: 0;margin: 0;margin-top: 0.3rem;"></td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: initial">des délais pour les rendez-vous auprès de l’assistante sociale</td>
+                            <td><input type="radio" class="form-check-input" value="Tout à fait d'accord" name="delaisRDV_accompagnement_assistanceSociale"  style="padding: 0;margin: 0;margin-top: 0.3rem;"></td>
+                            <td><input type="radio" class="form-check-input" value="D'accord" name="delaisRDV_accompagnement_assistanceSociale"  style="padding: 0;margin: 0;margin-top: 0.3rem;"></td>
+                            <td><input type="radio" class="form-check-input" value="Pas d'accord" name="delaisRDV_accompagnement_assistanceSociale"  style="padding: 0;margin: 0;margin-top: 0.3rem;"></td>
+                            <td><input type="radio" class="form-check-input" value="Non Concerné" name="delaisRDV_accompagnement_assistanceSociale"  style="padding: 0;margin: 0;margin-top: 0.3rem;"></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="form-group">
+                    <label>Je souhaite apporter les améliorations suivantes :</label>
+                    <textarea class="form-control" rows="3" name="amelioration_accompagnement_assistanceSociale" maxlength="200"></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Home {% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+{% endblock %}
+
+{% block javascripts %}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+{% endblock %}
+
+{% block body %}
+    {% include 'commun/heading.html.twig' %}
+
+    <div class="container" style="margin-top:30px;margin-bottom:30px;padding-top: 4%;padding-bottom: 4%;">
+        <div class="row">
+            <div class="col-sm-5">
+                <a href="{{ path("home") }}"> <button class="btn btn-secondary" style="margin-left: 35%;">Retour</button></a>
+            </div>
+            <div class="col-sm-6">
+                <table>
+                    <tr>
+                        <td><a href="{{ path("generation_code") }}"><button class="btn btn-secondary" style="width: 200px;height: 100px;"> Générer x Code(s) </button></a></td>
+                    </tr>
+                    <tr>
+                        <td> <h1 style="visibility: hidden">Lalala</h1></td>
+                    </tr>
+                    <tr>
+                        <td><a href="{{ path('recuperation_donnees') }}"><button class="btn btn-secondary" style="width: 200px;height: 100px;"> Récupérer les données </button></a></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    {% include 'commun/padding.html.twig' %}
+{% endblock %}

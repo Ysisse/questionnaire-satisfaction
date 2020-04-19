@@ -1,0 +1,62 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Questionnaire de Satisfaction {% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('css/questionnaire_satisfaction.css') }}" type="text/css">
+{% endblock %}
+
+{% block javascripts %}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+    <script src="{{ asset('js/validationFormulaire.js') }}"></script>
+{% endblock %}
+
+{% block body %}
+    {% include 'commun/heading.html.twig' %}
+    {% include 'commun/progression.html.twig' %}
+    <div class="container" style="margin-top:30px;margin-bottom:30px;">
+        <div class="row">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-9">
+                <form name="questionnaire_satisfaction" method="post" onsubmit="return validateForm()">
+                    {% include 'question/questionnaire/age.html.twig' %}
+                    {% include 'question/questionnaire/formations_dispositifs.html.twig' %}
+                    {% include 'question/questionnaire/departement_origine.html.twig' %}
+                    {% include 'question/questionnaire/regime.html.twig' %}
+                    {% include 'question/questionnaire/decouverteEtablissement.html.twig' %}
+                    {% include 'question/questionnaire/pre_accueil.html.twig' %}
+                    {% include 'question/questionnaire/accueil.html.twig' %}
+                    {% include 'question/questionnaire/dispositifSuivi_formationSuivie.html.twig' %}
+                    {% include 'question/questionnaire/projetPersonnalise.html.twig' %}
+                    {% include 'question/questionnaire/accompagnement_assistanceSociale.html.twig' %}
+                    {% include 'question/questionnaire/accompagnement_psychologueClinicienne.html.twig' %}
+                    {% include 'question/questionnaire/accompagnement_psychologueTravail.html.twig' %}
+                    {% include 'question/questionnaire/accompagnement_conseillerInsertionProfessionel.html.twig' %}
+                    {% include 'question/questionnaire/accompagnement_referentParcours.html.twig' %}
+                    {% include 'question/questionnaire/accompagnement_infirmiere.html.twig' %}
+                    {% include 'question/questionnaire/accompagnement_medecin.html.twig' %}
+                    {% include 'question/questionnaire/hebergement.html.twig' %}
+                    {% include 'question/questionnaire/restauration.html.twig' %}
+                    {% include 'question/questionnaire/transport.html.twig' %}
+                    {% include 'question/questionnaire/securite.html.twig' %}
+                    {% include 'question/questionnaire/conseilVieSociale.html.twig' %}
+                    {% include 'question/questionnaire/preparationSortieCentre.html.twig' %}
+                    {% include 'question/questionnaire/satisfactionGenerale.html.twig' %}
+                    <div class="col-sm-12 question_confirmation row" style="display: none" id="question_confirmation">
+                        <div class="col-sm-10"></div>
+                        <div class="col-sm-2 ">
+                            <button type="submit" class="btn btn-secondary">Confirmer</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    {% include 'commun/padding.html.twig' %}
+{% endblock %}
