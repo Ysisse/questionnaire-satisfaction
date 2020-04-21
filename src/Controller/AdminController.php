@@ -63,12 +63,17 @@ class AdminController extends AbstractController
     /**
      * @Route("/clean_bd", name="clean_bd", methods={"GET", "POST"})
      */
-    public function clean_bd(QuestionnaireRepository $questionnaireRepository, Request $request): Response
+    public function clean_bd(UtilisateurRepository $utilisateurRepository, QuestionnaireRepository $questionnaireRepository, Request $request): Response
     {
         if($request->isMethod('POST')){
             foreach ($questionnaireRepository->findAll() as $questionnaire){
                 $entityManager = $this->getDoctrine()->getManager();
                 $entityManager->remove($questionnaire);
+                $entityManager->flush();
+            }
+            foreach ($utilisateurRepository->findAll() as $utilisateur){
+                $entityManager = $this->getDoctrine()->getManager();
+                $entityManager->remove($utilisateur);
                 $entityManager->flush();
             }
         }
