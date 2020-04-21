@@ -1,6 +1,6 @@
 <div class="row" id="question_page_16" style="display: none;">
     <div class="col-sm-12" style="padding: 0">
-        <label> 16 - L’accompagnement par le médecin :</label>
+        <label style="font-weight:bold;text-decoration : underline;"> 16 - L’accompagnement par le médecin :</label>
     </div>
     <div class="col-sm-12">
         <div class="col-sm-2"></div>
@@ -12,47 +12,47 @@
                 <div class="col-sm-4">
                     <div class="form-check-inline">
                         <label class="form-check-label">
-                            <input type="radio" class="form-check-input" value="Oui" name="beneficieAccompagnement_accompagnement_medecin" onchange="document.getElementById('satisfaction_accompagnement_medecin').style.display = '';"> Oui
+                            <input type="radio" class="form-check-input" value="Oui" name="beneficieAccompagnement_accompagnement_medecin" onchange="changezCurseur();document.getElementById('satisfaction_accompagnement_medecin').style.display = '';"> Oui
                         </label>
                     </div>
                     <div class="form-check-inline">
                         <label class="form-check-label">
-                            <input type="radio" class="form-check-input" value="Non" name="beneficieAccompagnement_accompagnement_medecin" onchange="document.getElementById('satisfaction_accompagnement_medecin').style.display = 'none';"> Non
+                            <input type="radio" class="form-check-input" value="Non" name="beneficieAccompagnement_accompagnement_medecin" onchange="changezCurseur();document.getElementById('satisfaction_accompagnement_medecin').style.display = 'none';"> Non
                         </label>
                     </div>
                 </div>
             </div>
             <div class="col-sm-12" style="margin-top: 1%;display: none" id="satisfaction_accompagnement_medecin">
-                <label>Estimez votre degré de satisfaction :</label>
+                <label style="font-style: italic;">Estimez votre degré de satisfaction :</label>
                 <table class="table table-sm" style="width: 120%;text-align: center;">
                     <thead>
                         <tr>
-                            <td style="text-align: initial; padding-top: 2%;">Je suis satisfait(e)</td>
-                            <td>Tout à fait d'accord</td>
-                            <td>D'accord</td>
-                            <td>Pas d'accord</td>
-                            <td>Non Concerné</td>
+                            <td style="font-weight:bold;text-align: initial; padding-top: 2%;">Je suis satisfait(e)</td>
+                            <td style="font-weight:bold;">Tout à fait d'accord</td>
+                            <td style="font-weight:bold;">D'accord</td>
+                            <td style="font-weight:bold;">Pas d'accord</td>
+                            <td style="font-weight:bold;">Non Concerné</td>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td style="text-align: initial">de l’écoute du médecin lors du rendez-vous </td>
-                            <td><input type="radio" class="form-check-input" value="Tout à fait d'accord" name="ecouteRDV_accompagnement_medecin"  style="padding: 0;margin: 0;margin-top: 0.3rem;"></td>
-                            <td><input type="radio" class="form-check-input" value="D'accord" name="ecouteRDV_accompagnement_medecin"  style="padding: 0;margin: 0;margin-top: 0.3rem;"></td>
-                            <td><input type="radio" class="form-check-input" value="Pas d'accord" name="ecouteRDV_accompagnement_medecin"  style="padding: 0;margin: 0;margin-top: 0.3rem;"></td>
-                            <td><input type="radio" class="form-check-input" value="Non Concerné" name="ecouteRDV_accompagnement_medecin"  style="padding: 0;margin: 0;margin-top: 0.3rem;"></td>
+                            <td><input onchange="changezCurseur();" type="radio" class="form-check-input" value="Tout à fait d'accord" name="ecouteRDV_accompagnement_medecin"  style="padding: 0;margin: 0;margin-top: 0.3rem;"></td>
+                            <td><input onchange="changezCurseur();" type="radio" class="form-check-input" value="D'accord" name="ecouteRDV_accompagnement_medecin"  style="padding: 0;margin: 0;margin-top: 0.3rem;"></td>
+                            <td><input onchange="changezCurseur();" type="radio" class="form-check-input" value="Pas d'accord" name="ecouteRDV_accompagnement_medecin"  style="padding: 0;margin: 0;margin-top: 0.3rem;"></td>
+                            <td><input onchange="changezCurseur();" type="radio" class="form-check-input" value="Non Concerné" name="ecouteRDV_accompagnement_medecin"  style="padding: 0;margin: 0;margin-top: 0.3rem;"></td>
                         </tr>
                         <tr>
                             <td style="text-align: initial">de la clarté des explications du médecin</td>
-                            <td><input type="radio" class="form-check-input" value="Tout à fait d'accord" name="clarteExplication_accompagnement_medecin"  style="padding: 0;margin: 0;margin-top: 0.3rem;"></td>
-                            <td><input type="radio" class="form-check-input" value="D'accord" name="clarteExplication_accompagnement_medecin"  style="padding: 0;margin: 0;margin-top: 0.3rem;"></td>
-                            <td><input type="radio" class="form-check-input" value="Pas d'accord" name="clarteExplication_accompagnement_medecin"  style="padding: 0;margin: 0;margin-top: 0.3rem;"></td>
-                            <td><input type="radio" class="form-check-input" value="Non Concerné" name="clarteExplication_accompagnement_medecin"  style="padding: 0;margin: 0;margin-top: 0.3rem;"></td>
+                            <td><input onchange="changezCurseur();" type="radio" class="form-check-input" value="Tout à fait d'accord" name="clarteExplication_accompagnement_medecin"  style="padding: 0;margin: 0;margin-top: 0.3rem;"></td>
+                            <td><input onchange="changezCurseur();" type="radio" class="form-check-input" value="D'accord" name="clarteExplication_accompagnement_medecin"  style="padding: 0;margin: 0;margin-top: 0.3rem;"></td>
+                            <td><input onchange="changezCurseur();" type="radio" class="form-check-input" value="Pas d'accord" name="clarteExplication_accompagnement_medecin"  style="padding: 0;margin: 0;margin-top: 0.3rem;"></td>
+                            <td><input onchange="changezCurseur();" type="radio" class="form-check-input" value="Non Concerné" name="clarteExplication_accompagnement_medecin"  style="padding: 0;margin: 0;margin-top: 0.3rem;"></td>
                         </tr>
                     </tbody>
                 </table>
                 <div class="form-group">
-                    <label>Je souhaite apporter les améliorations suivantes :</label>
+                    <label style="font-style: italic;">Je souhaite apporter les améliorations suivantes :</label>
                     <textarea class="form-control" rows="3" name="amelioration_accompagnement_medecin" maxlength="200"></textarea>
                 </div>
             </div>

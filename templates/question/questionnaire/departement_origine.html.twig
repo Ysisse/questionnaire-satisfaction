@@ -1,23 +1,23 @@
 <div class="row" id="question_page_3" style="display: none;">
     <div class="col-sm-12" style="padding: 0">
-        <label> 3 - Département d’origine : </label>
+        <label style="font-weight:bold;text-decoration : underline;"> 3 - Département d’origine : </label>
     </div>
     <div class="col-sm-12">
         <div class="col-sm-2"></div>
         <div class="col-sm-10">
             <div class="form-check">
                 <label class="form-check-label">
-                    <input type="radio" class="form-check-input" value="Région Centre" name="departement_origine"> Région Centre
+                    <input onchange="changezCurseur();" type="radio" class="form-check-input" value="Région Centre" name="departement_origine"> Région Centre
                 </label>
             </div>
             <div class="form-check">
                 <label class="form-check-label">
-                    <input type="radio" class="form-check-input" value="Autre région" name="departement_origine"> Autre région
+                    <input onchange="changezCurseur();" type="radio" class="form-check-input" value="Autre région" name="departement_origine"> Autre région
                 </label>
             </div>
             <div class="form-group">
                 <label for="usr">Numéro de département :</label>
-                <input type="number" class="form-control" name="num_departement" onchange="validationNumDepartement(this)">
+                <input type="number" class="form-control" name="num_departement" onkeyup="changezCurseur();validationNumDepartement(this)">
             </div>
         </div>
     </div>

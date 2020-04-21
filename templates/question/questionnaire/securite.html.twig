@@ -1,6 +1,6 @@
 <div class="row" id="question_page_20" style="display: none;">
     <div class="col-sm-12" style="padding: 0">
-        <label> 20 - La sécurité :</label>
+        <label style="font-weight:bold;text-decoration : underline;"> 20 - La sécurité :</label>
     </div>
     <div class="col-sm-12">
         <div class="col-sm-2"></div>
@@ -12,40 +12,40 @@
                 <div class="col-sm-4">
                     <div class="form-check-inline">
                         <label class="form-check-label">
-                            <input type="radio" class="form-check-input" value="Oui" name="beneficie_securite" onchange="document.getElementById('satisfaction_incendie').style.display = '';"> Oui
+                            <input type="radio" class="form-check-input" value="Oui" name="beneficie_securite" onchange="changezCurseur();document.getElementById('satisfaction_incendie').style.display = '';"> Oui
                         </label>
                     </div>
                     <div class="form-check-inline">
                         <label class="form-check-label">
-                            <input type="radio" class="form-check-input" value="Non" name="beneficie_securite" onchange="document.getElementById('satisfaction_incendie').style.display = 'none';"> Non
+                            <input type="radio" class="form-check-input" value="Non" name="beneficie_securite" onchange="changezCurseur();document.getElementById('satisfaction_incendie').style.display = 'none';"> Non
                         </label>
                     </div>
                 </div>
             </div>
             <div class="col-sm-12" style="margin-top: 1%;display: none;" id="satisfaction_incendie">
-                <label>Estimez votre degré de satisfaction :</label>
+                <label style="font-style: italic;">Estimez votre degré de satisfaction :</label>
                 <table class="table table-sm" style="width: 120%;text-align: center;">
                     <thead>
                         <tr>
-                            <td style="text-align: initial; padding-top: 2%;">Je suis satisfait(e)</td>
-                            <td>Tout à fait d'accord</td>
-                            <td>D'accord</td>
-                            <td>Pas d'accord</td>
-                            <td>Non Concerné</td>
+                            <td style="font-weight:bold;text-align: initial; padding-top: 2%;">Je suis satisfait(e)</td>
+                            <td style="font-weight:bold;">Tout à fait d'accord</td>
+                            <td style="font-weight:bold;">D'accord</td>
+                            <td style="font-weight:bold;">Pas d'accord</td>
+                            <td style="font-weight:bold;">Non Concerné</td>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td style="text-align: initial">de la formation incendie dispensée par le référent qualité / sécurité</td>
-                            <td><input type="radio" class="form-check-input" value="Tout à fait d'accord" name="formation_securite"  style="padding: 0;margin: 0;margin-top: 0.3rem;"></td>
-                            <td><input type="radio" class="form-check-input" value="D'accord" name="formation_securite"  style="padding: 0;margin: 0;margin-top: 0.3rem;"></td>
-                            <td><input type="radio" class="form-check-input" value="Pas d'accord" name="formation_securite"  style="padding: 0;margin: 0;margin-top: 0.3rem;"></td>
-                            <td><input type="radio" class="form-check-input" value="Non Concerné" name="formation_securite"  style="padding: 0;margin: 0;margin-top: 0.3rem;"></td>
+                            <td><input onchange="changezCurseur();" type="radio" class="form-check-input" value="Tout à fait d'accord" name="formation_securite"  style="padding: 0;margin: 0;margin-top: 0.3rem;"></td>
+                            <td><input onchange="changezCurseur();" type="radio" class="form-check-input" value="D'accord" name="formation_securite"  style="padding: 0;margin: 0;margin-top: 0.3rem;"></td>
+                            <td><input onchange="changezCurseur();" type="radio" class="form-check-input" value="Pas d'accord" name="formation_securite"  style="padding: 0;margin: 0;margin-top: 0.3rem;"></td>
+                            <td><input onchange="changezCurseur();" type="radio" class="form-check-input" value="Non Concerné" name="formation_securite"  style="padding: 0;margin: 0;margin-top: 0.3rem;"></td>
                         </tr>
                     </tbody>
                 </table>
                 <div class="form-group">
-                    <label>Je souhaite apporter les améliorations suivantes :</label>
+                    <label style="font-style: italic;">Je souhaite apporter les améliorations suivantes :</label>
                     <textarea class="form-control" rows="3" name="amelioration_securite" maxlength="200"></textarea>
                 </div>
             </div>

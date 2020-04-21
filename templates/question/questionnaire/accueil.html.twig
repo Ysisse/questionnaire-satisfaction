@@ -1,6 +1,6 @@
 <div class="row" id="question_page_7" style="display: none;">
     <div class="col-sm-12" style="padding: 0">
-        <label> 7 - L'accueil :</label>
+        <label style="font-weight:bold;text-decoration : underline;"> 7 - L'accueil :</label>
     </div>
     <div class="col-sm-12">
         <div class="col-sm-2"></div>
@@ -15,12 +15,12 @@
                 <div class="col-sm-4">
                     <div class="form-check-inline">
                         <label class="form-check-label">
-                            <input type="radio" class="form-check-input" value="Oui" name="contratSejour_accueil" > Oui
+                            <input onchange="changezCurseur();" type="radio" class="form-check-input" value="Oui" name="contratSejour_accueil" > Oui
                         </label>
                     </div>
                     <div class="form-check-inline">
                         <label class="form-check-label">
-                            <input type="radio" class="form-check-input" value="Non" name="contratSejour_accueil" > Non
+                            <input onchange="changezCurseur();" type="radio" class="form-check-input" value="Non" name="contratSejour_accueil" > Non
                         </label>
                     </div>
                 </div>
@@ -32,12 +32,12 @@
                 <div class="col-sm-4">
                     <div class="form-check-inline">
                         <label class="form-check-label">
-                            <input type="radio" class="form-check-input" value="Oui" name="livretAccueil_accueil"> Oui
+                            <input onchange="changezCurseur();" type="radio" class="form-check-input" value="Oui" name="livretAccueil_accueil"> Oui
                         </label>
                     </div>
                     <div class="form-check-inline">
                         <label class="form-check-label">
-                            <input type="radio" class="form-check-input" value="Non" name="livretAccueil_accueil" > Non
+                            <input onchange="changezCurseur();" type="radio" class="form-check-input" value="Non" name="livretAccueil_accueil" > Non
                         </label>
                     </div>
                 </div>
@@ -49,12 +49,12 @@
                 <div class="col-sm-4">
                     <div class="form-check-inline">
                         <label class="form-check-label">
-                            <input type="radio" class="form-check-input" value="Oui" name="livretFonctionnement_accueil" > Oui
+                            <input onchange="changezCurseur();" type="radio" class="form-check-input" value="Oui" name="livretFonctionnement_accueil" > Oui
                         </label>
                     </div>
                     <div class="form-check-inline">
                         <label class="form-check-label">
-                            <input type="radio" class="form-check-input" value="Non" name="livretFonctionnement_accueil" > Non
+                            <input onchange="changezCurseur();" type="radio" class="form-check-input" value="Non" name="livretFonctionnement_accueil" > Non
                         </label>
                     </div>
                 </div>
@@ -63,64 +63,64 @@
                 <label style="font-weight:bold;">Votre accueil : </label>
             </div>
             <div class="col-sm-12" style="margin-top: 1%;">
-                <label>Estimez votre degré de satisfaction :</label>
+                <label style="font-style: italic;">Estimez votre degré de satisfaction :</label>
                 <table class="table table-sm" style="width: 120%;text-align: center;">
                     <thead>
                         <tr>
-                            <td style="text-align: initial; padding-top: 2%;">Je suis satisfait(e)</td>
-                            <td>Tout à fait d'accord</td>
-                            <td>D'accord</td>
-                            <td>Pas d'accord</td>
-                            <td>Pas du tout d'accord</td>
+                            <td style="font-weight:bold;text-align: initial; padding-top: 2%;">Je suis satisfait(e)</td>
+                            <td style="font-weight:bold;">Tout à fait d'accord</td>
+                            <td style="font-weight:bold;">D'accord</td>
+                            <td style="font-weight:bold;">Pas d'accord</td>
+                            <td style="font-weight:bold;">Pas du tout d'accord</td>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td style="text-align: initial">de l’accueil physique reçu de la part des secrétaires</td>
-                            <td><input type="radio" class="form-check-input" value="Tout à fait d'accord" name="accueilPhysique_accueil"  style="padding: 0;margin: 0;margin-top: 0.3rem;"></td>
-                            <td><input type="radio" class="form-check-input" value="D'accord" name="accueilPhysique_accueil"  style="padding: 0;margin: 0;margin-top: 0.3rem;"></td>
-                            <td><input type="radio" class="form-check-input" value="Pas d'accord" name="accueilPhysique_accueil"  style="padding: 0;margin: 0;margin-top: 0.3rem;"></td>
-                            <td><input type="radio" class="form-check-input" value="Pas du tout d'accord" name="accueilPhysique_accueil"  style="padding: 0;margin: 0;margin-top: 0.3rem;"></td>
+                            <td><input onchange="changezCurseur();" type="radio" class="form-check-input" value="Tout à fait d'accord" name="accueilPhysique_accueil"  style="padding: 0;margin: 0;margin-top: 0.3rem;"></td>
+                            <td><input onchange="changezCurseur();" type="radio" class="form-check-input" value="D'accord" name="accueilPhysique_accueil"  style="padding: 0;margin: 0;margin-top: 0.3rem;"></td>
+                            <td><input onchange="changezCurseur();" type="radio" class="form-check-input" value="Pas d'accord" name="accueilPhysique_accueil"  style="padding: 0;margin: 0;margin-top: 0.3rem;"></td>
+                            <td><input onchange="changezCurseur();" type="radio" class="form-check-input" value="Pas du tout d'accord" name="accueilPhysique_accueil"  style="padding: 0;margin: 0;margin-top: 0.3rem;"></td>
                         </tr>
                         <tr>
                             <td style="text-align: initial">de l’accueil téléphonique</td>
-                            <td><input type="radio" class="form-check-input" value="Tout à fait d'accord" name="accueilTelephonique_accueil"  style="padding: 0;margin: 0;margin-top: 0.3rem;"></td>
-                            <td><input type="radio" class="form-check-input" value="D'accord" name="accueilTelephonique_accueil"  style="padding: 0;margin: 0;margin-top: 0.3rem;"></td>
-                            <td><input type="radio" class="form-check-input" value="Pas d'accord" name="accueilTelephonique_accueil"  style="padding: 0;margin: 0;margin-top: 0.3rem;"></td>
-                            <td><input type="radio" class="form-check-input" value="Pas du tout d'accord" name="accueilTelephonique_accueil"  style="padding: 0;margin: 0;margin-top: 0.3rem;"></td>
+                            <td><input onchange="changezCurseur();" type="radio" class="form-check-input" value="Tout à fait d'accord" name="accueilTelephonique_accueil"  style="padding: 0;margin: 0;margin-top: 0.3rem;"></td>
+                            <td><input onchange="changezCurseur();" type="radio" class="form-check-input" value="D'accord" name="accueilTelephonique_accueil"  style="padding: 0;margin: 0;margin-top: 0.3rem;"></td>
+                            <td><input onchange="changezCurseur();" type="radio" class="form-check-input" value="Pas d'accord" name="accueilTelephonique_accueil"  style="padding: 0;margin: 0;margin-top: 0.3rem;"></td>
+                            <td><input onchange="changezCurseur();" type="radio" class="form-check-input" value="Pas du tout d'accord" name="accueilTelephonique_accueil"  style="padding: 0;margin: 0;margin-top: 0.3rem;"></td>
                         </tr>
                         <tr>
                             <td style="text-align: initial">des horaires d’ouverture de l’accueil</td>
-                            <td><input type="radio" class="form-check-input" value="Tout à fait d'accord" name="horaireOuverture_accueil"  style="padding: 0;margin: 0;margin-top: 0.3rem;"></td>
-                            <td><input type="radio" class="form-check-input" value="D'accord" name="horaireOuverture_accueil"  style="padding: 0;margin: 0;margin-top: 0.3rem;"></td>
-                            <td><input type="radio" class="form-check-input" value="Pas d'accord" name="horaireOuverture_accueil"  style="padding: 0;margin: 0;margin-top: 0.3rem;"></td>
-                            <td><input type="radio" class="form-check-in put" value="Pas du tout d'accord" name="horaireOuverture_accueil"  style="padding: 0;margin: 0;margin-top: 0.3rem;"></td>
+                            <td><input onchange="changezCurseur();" type="radio" class="form-check-input" value="Tout à fait d'accord" name="horaireOuverture_accueil"  style="padding: 0;margin: 0;margin-top: 0.3rem;"></td>
+                            <td><input onchange="changezCurseur();" type="radio" class="form-check-input" value="D'accord" name="horaireOuverture_accueil"  style="padding: 0;margin: 0;margin-top: 0.3rem;"></td>
+                            <td><input onchange="changezCurseur();" type="radio" class="form-check-input" value="Pas d'accord" name="horaireOuverture_accueil"  style="padding: 0;margin: 0;margin-top: 0.3rem;"></td>
+                            <td><input onchange="changezCurseur();" type="radio" class="form-check-in put" value="Pas du tout d'accord" name="horaireOuverture_accueil"  style="padding: 0;margin: 0;margin-top: 0.3rem;"></td>
                         </tr>
                         <tr>
                             <td style="text-align: initial">de l’accueil des professionnels</td>
-                            <td><input type="radio" class="form-check-input" value="Tout à fait d'accord" name="accueilProfessionnel_accueil"  style="padding: 0;margin: 0;margin-top: 0.3rem;"></td>
-                            <td><input type="radio" class="form-check-input" value="D'accord" name="accueilProfessionnel_accueil"  style="padding: 0;margin: 0;margin-top: 0.3rem;"></td>
-                            <td><input type="radio" class="form-check-input" value="Pas d'accord" name="accueilProfessionnel_accueil"  style="padding: 0;margin: 0;margin-top: 0.3rem;"></td>
-                            <td><input type="radio" class="form-check-input" value="Pas du tout d'accord" name="accueilProfessionnel_accueil"  style="padding: 0;margin: 0;margin-top: 0.3rem;"></td>
+                            <td><input onchange="changezCurseur();" type="radio" class="form-check-input" value="Tout à fait d'accord" name="accueilProfessionnel_accueil"  style="padding: 0;margin: 0;margin-top: 0.3rem;"></td>
+                            <td><input onchange="changezCurseur();" type="radio" class="form-check-input" value="D'accord" name="accueilProfessionnel_accueil"  style="padding: 0;margin: 0;margin-top: 0.3rem;"></td>
+                            <td><input onchange="changezCurseur();" type="radio" class="form-check-input" value="Pas d'accord" name="accueilProfessionnel_accueil"  style="padding: 0;margin: 0;margin-top: 0.3rem;"></td>
+                            <td><input onchange="changezCurseur();" type="radio" class="form-check-input" value="Pas du tout d'accord" name="accueilProfessionnel_accueil"  style="padding: 0;margin: 0;margin-top: 0.3rem;"></td>
                         </tr>
                         <tr>
                             <td style="text-align: initial">de l’information reçue sur les règles de vie dans l’établissement (horaires des repas, transport, ...)</td>
-                            <td><input type="radio" class="form-check-input" value="Tout à fait d'accord" name="informationRegleVieEtablissement_accueil"  style="padding: 0;margin: 0;margin-top: 0.3rem;"></td>
-                            <td><input type="radio" class="form-check-input" value="D'accord" name="informationRegleVieEtablissement_accueil"  style="padding: 0;margin: 0;margin-top: 0.3rem;"></td>
-                            <td><input type="radio" class="form-check-input" value="Pas d'accord" name="informationRegleVieEtablissement_accueil"  style="padding: 0;margin: 0;margin-top: 0.3rem;"></td>
-                            <td><input type="radio" class="form-check-input" value="Pas du tout d'accord" name="informationRegleVieEtablissement_accueil"  style="padding: 0;margin: 0;margin-top: 0.3rem;"></td>
+                            <td><input onchange="changezCurseur();" type="radio" class="form-check-input" value="Tout à fait d'accord" name="informationRegleVieEtablissement_accueil"  style="padding: 0;margin: 0;margin-top: 0.3rem;"></td>
+                            <td><input onchange="changezCurseur();" type="radio" class="form-check-input" value="D'accord" name="informationRegleVieEtablissement_accueil"  style="padding: 0;margin: 0;margin-top: 0.3rem;"></td>
+                            <td><input onchange="changezCurseur();" type="radio" class="form-check-input" value="Pas d'accord" name="informationRegleVieEtablissement_accueil"  style="padding: 0;margin: 0;margin-top: 0.3rem;"></td>
+                            <td><input onchange="changezCurseur();" type="radio" class="form-check-input" value="Pas du tout d'accord" name="informationRegleVieEtablissement_accueil"  style="padding: 0;margin: 0;margin-top: 0.3rem;"></td>
                         </tr>
                         <tr>
                             <td style="text-align: initial">des informations reçues sur les activités proposées</td>
-                            <td><input type="radio" class="form-check-input" value="Tout à fait d'accord" name="informationRegleActivitesProposees_accueil"  style="padding: 0;margin: 0;margin-top: 0.3rem;"></td>
-                            <td><input type="radio" class="form-check-input" value="D'accord" name="informationRegleActivitesProposees_accueil"  style="padding: 0;margin: 0;margin-top: 0.3rem;"></td>
-                            <td><input type="radio" class="form-check-input" value="Pas d'accord" name="informationRegleActivitesProposees_accueil"  style="padding: 0;margin: 0;margin-top: 0.3rem;"></td>
-                            <td><input type="radio" class="form-check-input" value="Pas du tout d'accord" name="informationRegleActivitesProposees_accueil"  style="padding: 0;margin: 0;margin-top: 0.3rem;"></td>
+                            <td><input onchange="changezCurseur();" type="radio" class="form-check-input" value="Tout à fait d'accord" name="informationRegleActivitesProposees_accueil"  style="padding: 0;margin: 0;margin-top: 0.3rem;"></td>
+                            <td><input onchange="changezCurseur();" type="radio" class="form-check-input" value="D'accord" name="informationRegleActivitesProposees_accueil"  style="padding: 0;margin: 0;margin-top: 0.3rem;"></td>
+                            <td><input onchange="changezCurseur();" type="radio" class="form-check-input" value="Pas d'accord" name="informationRegleActivitesProposees_accueil"  style="padding: 0;margin: 0;margin-top: 0.3rem;"></td>
+                            <td><input onchange="changezCurseur();" type="radio" class="form-check-input" value="Pas du tout d'accord" name="informationRegleActivitesProposees_accueil"  style="padding: 0;margin: 0;margin-top: 0.3rem;"></td>
                         </tr>
                     </tbody>
                 </table>
                 <div class="form-group">
-                    <label>Je souhaite apporter les améliorations suivantes :</label>
+                    <label style="font-style: italic;">Je souhaite apporter les améliorations suivantes :</label>
                     <textarea class="form-control" rows="3" name="amelioration_accueil" maxlength="200"></textarea>
                 </div>
             </div>

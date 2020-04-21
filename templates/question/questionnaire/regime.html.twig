@@ -1,23 +1,23 @@
 <div class="row" id="question_page_4" style="display: none;">
     <div class="col-sm-12" style="padding: 0">
-        <label> 4 - Régime : </label>
+        <label style="font-weight:bold;text-decoration : underline;"> 4 - Régime : </label>
     </div>
     <div class="col-sm-12">
         <div class="col-sm-2"></div>
         <div class="col-sm-10">
             <div class="form-check">
                 <label class="form-check-label">
-                    <input type="radio" class="form-check-input" value="Externe" name="regime"> Externe (pas de repas, pas de chambre)
+                    <input onchange="changezCurseur();" type="radio" class="form-check-input" value="Externe" name="regime"> Externe (pas de repas, pas de chambre)
                 </label>
             </div>
             <div class="form-check">
                 <label class="form-check-label">
-                    <input type="radio" class="form-check-input" value="Demi-pensionnaire" name="regime"> Demi-pensionnaire (repas du midi, pas de chambre)
+                    <input onchange="changezCurseur();" type="radio" class="form-check-input" value="Demi-pensionnaire" name="regime"> Demi-pensionnaire (repas du midi, pas de chambre)
                 </label>
             </div>
             <div class="form-check">
                 <label class="form-check-label">
-                    <input type="radio" class="form-check-input" value="Interne" name="regime"> Interne (occupation d’une chambre)
+                    <input onchange="changezCurseur();" type="radio" class="form-check-input" value="Interne" name="regime"> Interne (occupation d’une chambre)
                 </label>
             </div>
         </div>

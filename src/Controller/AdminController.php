@@ -58,7 +58,21 @@ class AdminController extends AbstractController
         } catch (IOExceptionInterface $exception) {
             echo "An error occurred while creating your directory at ".$exception->getPath();
         }
+    }
 
+    /**
+     * @Route("/clean_bd", name="clean_bd", methods={"GET", "POST"})
+     */
+    public function clean_bd(QuestionnaireRepository $questionnaireRepository, Request $request): Response
+    {
+        if($request->isMethod('POST')){
+            foreach ($questionnaireRepository->findAll() as $questionnaire){
+                $entityManager = $this->getDoctrine()->getManager();
+                $entityManager->remove($questionnaire);
+                $entityManager->flush();
+            }
+        }
+        return $this->redirectToRoute('admin_home');
     }
 
     /**

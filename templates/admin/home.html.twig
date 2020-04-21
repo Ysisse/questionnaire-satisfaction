@@ -32,6 +32,16 @@
                     <tr>
                         <td><a href="{{ path('recuperation_donnees') }}"><button class="btn btn-secondary" style="width: 200px;height: 100px;"> Récupérer les données </button></a></td>
                     </tr>
+                    <tr>
+                        <td> <h1 style="visibility: hidden">Lalala</h1></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <form method="post" action="{{ path('clean_bd') }}" onsubmit="return confirm('Etes-vous sûr de supprimer toutes les données ?');">
+                                <button class="btn btn-secondary" style="width: 200px;height: 100px;">Supprimer les données</button>
+                            </form>
+                        </td>
+                    </tr>
                 </table>
             </div>
         </div>

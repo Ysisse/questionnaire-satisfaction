@@ -96,7 +96,7 @@ function verifPage5() {
         (
             document.forms["questionnaire_satisfaction"]["autre_decouvertEtablissement"].checked
             &&
-            document.getElementById("decouvertEtablissement_autre_input").value != ""
+            document.forms["questionnaire_satisfaction"]["decouvertEtablissement_autre"].value != ""
         )
     ){
         pageSuivante = true;
@@ -508,6 +508,7 @@ function verifPage23() {
         &&
         document.forms["questionnaire_satisfaction"]["recommenderai_satisfactionGenerale"].value != ""
     ) {
+        document.getElementById("question_confirmation_button").innerHTML = '<button type="submit" class="btn btn-secondary" id="question_confirmation_button">Confirmer</button>';
         pageSuivante = true;
         return true;
     }
@@ -516,75 +517,7 @@ function verifPage23() {
 }
 
 function passerPageSuivante() {
-    if(page==1){
-        verifPage1();
-    }
-    if(page==2){
-        verifPage2();
-    }
-    if(page==3){
-        verifPage3();
-    }
-    if(page==4){
-        verifPage4();
-    }
-    if(page==5){
-        verifPage5();
-    }
-    if(page==6){
-        verifPage6();
-    }
-    if(page==7){
-        verifPage7();
-    }
-    if(page==8){
-        verifPage8();
-    }
-    if(page==9){
-        verifPage9();
-    }
-    if(page==10){
-        verifPage10();
-    }
-    if(page==11){
-        verifPage11();
-    }
-    if(page==12){
-        verifPage12();
-    }
-    if(page==13){
-        verifPage13();
-    }
-    if(page==14){
-        verifPage14();
-    }
-    if(page==15){
-        verifPage15();
-    }
-    if(page==16){
-        verifPage16();
-    }
-    if(page==17){
-        verifPage17();
-    }
-    if(page==18){
-        verifPage18();
-    }
-    if(page==19){
-        verifPage19();
-    }
-    if(page==20){
-        verifPage20();
-    }
-    if(page==21){
-        verifPage21();
-    }
-    if(page==22){
-        verifPage22();
-    }
-    if(page==23){
-        verifPage23();
-    }
+    validationPage();
 
     if(pageSuivante) {
         togg("question_page_" + page);
@@ -605,6 +538,7 @@ function passerPageSuivante() {
             page++;
         }
         togg("question_page_" + page);
+        changezCurseur();
         document.getElementById("question_progession").innerHTML = "Progression : page "+page+" sur 23";
         pageSuivante = false;
         if(page == 23){
@@ -633,13 +567,99 @@ function passerPagePrecedante() {
             page--;
         }
     }
+    changezCurseur();
     togg("question_page_"+page);
     if(page!=23){
         document.getElementById("question_passage_droite").style.visibility = "";
-        document.getElementById("question_confirmation").style.visibility = "none";
+        document.getElementById("question_confirmation").style.display = "none";
+    }
+    if(page==23){
+        document.getElementById("question_confirmation").style.display = "";
     }
     if(page==1){
         document.getElementById("question_passage_gauche").style.visibility = "hidden";
     }
     document.getElementById("question_progession").innerHTML = "Progression : page "+page+" sur 23";
+}
+
+function validationPage(){
+    if(page==1){
+        return verifPage1();
+    }
+    if(page==2){
+        return verifPage2();
+    }
+    if(page==3){
+        return verifPage3();
+    }
+    if(page==4){
+        return verifPage4();
+    }
+    if(page==5){
+        return verifPage5();
+    }
+    if(page==6){
+        return verifPage6();
+    }
+    if(page==7){
+        return verifPage7();
+    }
+    if(page==8){
+        return verifPage8();
+    }
+    if(page==9){
+        return verifPage9();
+    }
+    if(page==10){
+        return verifPage10();
+    }
+    if(page==11){
+        return verifPage11();
+    }
+    if(page==12){
+        return verifPage12();
+    }
+    if(page==13){
+        return verifPage13();
+    }
+    if(page==14){
+        return verifPage14();
+    }
+    if(page==15){
+        return verifPage15();
+    }
+    if(page==16){
+        return verifPage16();
+    }
+    if(page==17){
+        return verifPage17();
+    }
+    if(page==18){
+        return verifPage18();
+    }
+    if(page==19){
+        return verifPage19();
+    }
+    if(page==20){
+        return verifPage20();
+    }
+    if(page==21){
+        return verifPage21();
+    }
+    if(page==22){
+        return verifPage22();
+    }
+    if(page==23){
+        return verifPage23();
+    }
+}
+
+function changezCurseur() {
+    console.log(validationPage());
+    console.log(document.getElementById("question_passage_droite"));
+    if(validationPage()){
+        document.getElementById("question_passage_droite").style = "color: green;cursor: url(https://dab1nmslvvntp.cloudfront.net/wp-content/uploads/2015/07/1436013803checkbox-1024x1024.jpg), pointer;";
+    } else {
+        document.getElementById("question_passage_droite").style = "color: red;cursor: not-allowed;";
+    }
 }

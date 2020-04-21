@@ -1,27 +1,27 @@
 <div class="row" id="question_page_23" style="display: none;">
     <div class="col-sm-12" style="padding: 0">
-        <label> 23 - SactifactionGenerale :</label>
+        <label style="font-weight:bold;text-decoration : underline;"> 23 - Satisfaction Générale :</label>
     </div>
     <div class="col-sm-12">
         <div class="col-sm-2"></div>
         <div class="col-sm-10">
             <div class="col-sm-12" style="margin-top: 1%;">
-                <label>Estimez votre degré de satisfaction :</label>
+                <label style="font-style: italic;">Estimez votre degré de satisfaction :</label>
                 <table class="table table-sm" style="width: 120%;text-align: center;">
                     <thead>
                         <tr>
-                            <td style="text-align: initial; padding-top: 2%;">Je suis satisfait(e)</td>
-                            <td>Tout à fait d'accord</td>
-                            <td>D'accord</td>
-                            <td>Pas d'accord</td>
+                            <td style="font-weight:bold;text-align: initial; padding-top: 2%;">Je suis satisfait(e)</td>
+                            <td style="font-weight:bold;">Tout à fait d'accord</td>
+                            <td style="font-weight:bold;">D'accord</td>
+                            <td style="font-weight:bold;">Pas d'accord</td>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td style="text-align: initial">d’une manière générale du centre Les Rhuets</td>
-                            <td><input type="radio" class="form-check-input" value="Tout à fait d'accord" name="maniereGeneral_satisfactionGenerale"  style="padding: 0;margin: 0;margin-top: 0.3rem;"></td>
-                            <td><input type="radio" class="form-check-input" value="D'accord" name="maniereGeneral_satisfactionGenerale"  style="padding: 0;margin: 0;margin-top: 0.3rem;"></td>
-                            <td><input type="radio" class="form-check-input" value="Pas d'accord" name="maniereGeneral_satisfactionGenerale"  style="padding: 0;margin: 0;margin-top: 0.3rem;"></td>
+                            <td><input onchange="verifPage23();" type="radio" class="form-check-input" value="Tout à fait d'accord" name="maniereGeneral_satisfactionGenerale"  style="padding: 0;margin: 0;margin-top: 0.3rem;"></td>
+                            <td><input onchange="verifPage23();" type="radio" class="form-check-input" value="D'accord" name="maniereGeneral_satisfactionGenerale"  style="padding: 0;margin: 0;margin-top: 0.3rem;"></td>
+                            <td><input onchange="verifPage23();" type="radio" class="form-check-input" value="Pas d'accord" name="maniereGeneral_satisfactionGenerale"  style="padding: 0;margin: 0;margin-top: 0.3rem;"></td>
                         </tr>
                     </tbody>
                 </table>
@@ -33,12 +33,12 @@
                 <div class="col-sm-4">
                     <div class="form-check-inline">
                         <label class="form-check-label">
-                            <input type="radio" class="form-check-input" value="Oui" name="recommenderai_satisfactionGenerale" > Oui
+                            <input onchange="verifPage23();" type="radio" class="form-check-input" value="Oui" name="recommenderai_satisfactionGenerale" > Oui
                         </label>
                     </div>
                     <div class="form-check-inline">
                         <label class="form-check-label">
-                            <input type="radio" class="form-check-input" value="Non" name="recommenderai_satisfactionGenerale" > Non
+                            <input onchange="verifPage23();" type="radio" class="form-check-input" value="Non" name="recommenderai_satisfactionGenerale" > Non
                         </label>
                     </div>
                 </div>

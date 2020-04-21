@@ -1,6 +1,6 @@
 <div class="row" id="question_page_5" style="display: none;">
     <div class="col-sm-12" style="padding: 0">
-        <label> 5 - Vous avez découvert l'établissement par :
+        <label> <label style="font-weight:bold;text-decoration : underline;">5 - Vous avez découvert l'établissement par : </label>
             <br>
             <small> Plusieurs réponses possibles </small>
         </label>
@@ -10,37 +10,37 @@
         <div class="col-sm-10">
             <div class="form-check">
                 <label class="form-check-label">
-                    <input type="checkbox" class="form-check-input" value="La MDPH " name="MDPH_decouvertEtablissement"> La MDPH
+                    <input onchange="changezCurseur();" type="checkbox" class="form-check-input" value="La MDPH " name="MDPH_decouvertEtablissement"> La MDPH
                 </label>
             </div>
             <div class="form-check">
                 <label class="form-check-label">
-                    <input type="checkbox" class="form-check-input" value="En surfant sur internet" name="internet_decouvertEtablissement"> En surfant sur internet
+                    <input onchange="changezCurseur();" type="checkbox" class="form-check-input" value="En surfant sur internet" name="internet_decouvertEtablissement"> En surfant sur internet
                 </label>
             </div>
             <div class="form-check">
                 <label class="form-check-label">
-                    <input type="checkbox" class="form-check-input" value="Par mon réseau personnel" name="reseauPersonnel_decouvertEtablissement"> Par mon réseau personnel
+                    <input onchange="changezCurseur();" type="checkbox" class="form-check-input" value="Par mon réseau personnel" name="reseauPersonnel_decouvertEtablissement"> Par mon réseau personnel
                 </label>
             </div>
             <div class="form-check">
                 <label class="form-check-label">
-                    <input type="checkbox" class="form-check-input" value="Par mon conseiller cap emploi" name="conseillerCapEmploi_decouvertEtablissement"> Par mon conseiller cap emploi
+                    <input onchange="changezCurseur();" type="checkbox" class="form-check-input" value="Par mon conseiller cap emploi" name="conseillerCapEmploi_decouvertEtablissement"> Par mon conseiller cap emploi
                 </label>
             </div>
             <div class="form-check">
                 <label class="form-check-label">
-                    <input type="checkbox" class="form-check-input" value="Par mon conseiller pôle emploi" name="conseillerPoleEmploi_decouvertEtablissement"> Par mon conseiller pôle emploi
+                    <input onchange="changezCurseur();" type="checkbox" class="form-check-input" value="Par mon conseiller pôle emploi" name="conseillerPoleEmploi_decouvertEtablissement"> Par mon conseiller pôle emploi
                 </label>
             </div>
             <div class="form-check">
                 <label class="form-check-label">
-                    <input type="checkbox" class="form-check-input" value="Autres établissements" name="autre_decouvertEtablissement" onchange="verificationDecouverteAutre(this);"> Autres établissements (centre de réadaptation professionnelle, établissements de santé, centre de formation)
+                    <input type="checkbox" class="form-check-input" value="Autres établissements" name="autre_decouvertEtablissement" onchange="changezCurseur();verificationDecouverteAutre(this);"> Autres établissements (centre de réadaptation professionnelle, établissements de santé, centre de formation)
                 </label>
             </div>
             <div class="form-group" id="decouvertEtablissement_autre" style="display: none;">
                 <label for="usr">A préciser :</label>
-                <input type="text" class="form-control" name="decouvertEtablissement_autre" maxlength="50">
+                <input onkeyup="changezCurseur();" type="text" class="form-control" name="decouvertEtablissement_autre" maxlength="50">
             </div>
         </div>
     </div>

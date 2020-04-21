@@ -1,6 +1,6 @@
 <div class="row" id="question_page_13" style="display: none;">
     <div class="col-sm-12" style="padding: 0">
-        <label> 13 - L’accompagnement par le conseiller en insertion professionnel :</label>
+        <label style="font-weight:bold;text-decoration : underline;"> 13 - L’accompagnement par le conseiller en insertion professionnel :</label>
     </div>
     <div class="col-sm-12">
         <div class="col-sm-2"></div>
@@ -12,12 +12,12 @@
                 <div class="col-sm-4">
                     <div class="form-check-inline">
                         <label class="form-check-label">
-                            <input type="radio" class="form-check-input" value="Oui" name="connaissancePresence_accompagnement_psychologueProfessionnel" > Oui
+                            <input onchange="changezCurseur();" type="radio" class="form-check-input" value="Oui" name="connaissancePresence_accompagnement_psychologueProfessionnel" > Oui
                         </label>
                     </div>
                     <div class="form-check-inline">
                         <label class="form-check-label">
-                            <input type="radio" class="form-check-input" value="Non" name="connaissancePresence_accompagnement_psychologueProfessionnel" > Non
+                            <input onchange="changezCurseur();" type="radio" class="form-check-input" value="Non" name="connaissancePresence_accompagnement_psychologueProfessionnel" > Non
                         </label>
                     </div>
                 </div>
@@ -29,75 +29,75 @@
                 <div class="col-sm-4">
                     <div class="form-check-inline">
                         <label class="form-check-label">
-                            <input type="radio" class="form-check-input" value="Oui" name="beneficieAccompagnement_accompagnement_psychologueProfessionnel" onchange="document.getElementById('satisfaction_accompagnement_psychologueProfessionnel').style.display = '';"> Oui
+                            <input type="radio" class="form-check-input" value="Oui" name="beneficieAccompagnement_accompagnement_psychologueProfessionnel" onchange="changezCurseur();document.getElementById('satisfaction_accompagnement_psychologueProfessionnel').style.display = '';"> Oui
                         </label>
                     </div>
                     <div class="form-check-inline">
                         <label class="form-check-label">
-                            <input type="radio" class="form-check-input" value="Non" name="beneficieAccompagnement_accompagnement_psychologueProfessionnel" onchange="document.getElementById('satisfaction_accompagnement_psychologueProfessionnel').style.display = 'none';"> Non
+                            <input type="radio" class="form-check-input" value="Non" name="beneficieAccompagnement_accompagnement_psychologueProfessionnel" onchange="changezCurseur();document.getElementById('satisfaction_accompagnement_psychologueProfessionnel').style.display = 'none';"> Non
                         </label>
                     </div>
                 </div>
             </div>
             <div class="col-sm-12" style="margin-top: 1%;display: none" id="satisfaction_accompagnement_psychologueProfessionnel">
-                <label>Estimez votre degré de satisfaction :</label>
+                <label style="font-style: italic;">Estimez votre degré de satisfaction :</label>
                 <table class="table table-sm" style="width: 120%;text-align: center;">
                     <thead>
                         <tr>
-                            <td style="text-align: initial; padding-top: 2%;">Je suis satisfait(e)</td>
-                            <td>Tout à fait d'accord</td>
-                            <td>D'accord</td>
-                            <td>Pas d'accord</td>
-                            <td>Non Concerné</td>
+                            <td style="font-weight:bold;text-align: initial; padding-top: 2%;">Je suis satisfait(e)</td>
+                            <td style="font-weight:bold;">Tout à fait d'accord</td>
+                            <td style="font-weight:bold;">D'accord</td>
+                            <td style="font-weight:bold;">Pas d'accord</td>
+                            <td style="font-weight:bold;">Non Concerné</td>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td style="text-align: initial">de l’accompagnement réalisé par le conseiller en insertion professionnel</td>
-                            <td><input type="radio" class="form-check-input" value="Tout à fait d'accord" name="accompagnementRealise_accompagnement_psychologueProfessionnel"  style="padding: 0;margin: 0;margin-top: 0.3rem;"></td>
-                            <td><input type="radio" class="form-check-input" value="D'accord" name="accompagnementRealise_accompagnement_psychologueProfessionnel"  style="padding: 0;margin: 0;margin-top: 0.3rem;"></td>
-                            <td><input type="radio" class="form-check-input" value="Pas d'accord" name="accompagnementRealise_accompagnement_psychologueProfessionnel"  style="padding: 0;margin: 0;margin-top: 0.3rem;"></td>
-                            <td><input type="radio" class="form-check-input" value="Non Concerné" name="accompagnementRealise_accompagnement_psychologueProfessionnel"  style="padding: 0;margin: 0;margin-top: 0.3rem;"></td>
+                            <td><input onchange="changezCurseur();" type="radio" class="form-check-input" value="Tout à fait d'accord" name="accompagnementRealise_accompagnement_psychologueProfessionnel"  style="padding: 0;margin: 0;margin-top: 0.3rem;"></td>
+                            <td><input onchange="changezCurseur();" type="radio" class="form-check-input" value="D'accord" name="accompagnementRealise_accompagnement_psychologueProfessionnel"  style="padding: 0;margin: 0;margin-top: 0.3rem;"></td>
+                            <td><input onchange="changezCurseur();" type="radio" class="form-check-input" value="Pas d'accord" name="accompagnementRealise_accompagnement_psychologueProfessionnel"  style="padding: 0;margin: 0;margin-top: 0.3rem;"></td>
+                            <td><input onchange="changezCurseur();" type="radio" class="form-check-input" value="Non Concerné" name="accompagnementRealise_accompagnement_psychologueProfessionnel"  style="padding: 0;margin: 0;margin-top: 0.3rem;"></td>
                         </tr>
                         <tr>
                             <td style="text-align: initial">de l’écoute du conseiller en insertion professionnel</td>
-                            <td><input type="radio" class="form-check-input" value="Tout à fait d'accord" name="ecoutePsychologueProfessionnel_accompagnement_psychologueProfessionnel"  style="padding: 0;margin: 0;margin-top: 0.3rem;"></td>
-                            <td><input type="radio" class="form-check-input" value="D'accord" name="ecoutePsychologueProfessionnel_accompagnement_psychologueProfessionnel"  style="padding: 0;margin: 0;margin-top: 0.3rem;"></td>
-                            <td><input type="radio" class="form-check-input" value="Pas d'accord" name="ecoutePsychologueProfessionnel_accompagnement_psychologueProfessionnel"  style="padding: 0;margin: 0;margin-top: 0.3rem;"></td>
-                            <td><input type="radio" class="form-check-input" value="Non Concerné" name="ecoutePsychologueProfessionnel_accompagnement_psychologueProfessionnel"  style="padding: 0;margin: 0;margin-top: 0.3rem;"></td>
+                            <td><input onchange="changezCurseur();" type="radio" class="form-check-input" value="Tout à fait d'accord" name="ecoutePsychologueProfessionnel_accompagnement_psychologueProfessionnel"  style="padding: 0;margin: 0;margin-top: 0.3rem;"></td>
+                            <td><input onchange="changezCurseur();" type="radio" class="form-check-input" value="D'accord" name="ecoutePsychologueProfessionnel_accompagnement_psychologueProfessionnel"  style="padding: 0;margin: 0;margin-top: 0.3rem;"></td>
+                            <td><input onchange="changezCurseur();" type="radio" class="form-check-input" value="Pas d'accord" name="ecoutePsychologueProfessionnel_accompagnement_psychologueProfessionnel"  style="padding: 0;margin: 0;margin-top: 0.3rem;"></td>
+                            <td><input onchange="changezCurseur();" type="radio" class="form-check-input" value="Non Concerné" name="ecoutePsychologueProfessionnel_accompagnement_psychologueProfessionnel"  style="padding: 0;margin: 0;margin-top: 0.3rem;"></td>
                         </tr>
                         <tr>
                             <td style="text-align: initial">de la clarté des explications du conseiller en insertion professionnel</td>
-                            <td><input type="radio" class="form-check-input" value="Tout à fait d'accord" name="clarteExplications_accompagnement_psychologueProfessionnel"  style="padding: 0;margin: 0;margin-top: 0.3rem;"></td>
-                            <td><input type="radio" class="form-check-input" value="D'accord" name="clarteExplications_accompagnement_psychologueProfessionnel"  style="padding: 0;margin: 0;margin-top: 0.3rem;"></td>
-                            <td><input type="radio" class="form-check-input" value="Pas d'accord" name="clarteExplications_accompagnement_psychologueProfessionnel"  style="padding: 0;margin: 0;margin-top: 0.3rem;"></td>
-                            <td><input type="radio" class="form-check-input" value="Non Concerné" name="clarteExplications_accompagnement_psychologueProfessionnel"  style="padding: 0;margin: 0;margin-top: 0.3rem;"></td>
+                            <td><input onchange="changezCurseur();" type="radio" class="form-check-input" value="Tout à fait d'accord" name="clarteExplications_accompagnement_psychologueProfessionnel"  style="padding: 0;margin: 0;margin-top: 0.3rem;"></td>
+                            <td><input onchange="changezCurseur();" type="radio" class="form-check-input" value="D'accord" name="clarteExplications_accompagnement_psychologueProfessionnel"  style="padding: 0;margin: 0;margin-top: 0.3rem;"></td>
+                            <td><input onchange="changezCurseur();" type="radio" class="form-check-input" value="Pas d'accord" name="clarteExplications_accompagnement_psychologueProfessionnel"  style="padding: 0;margin: 0;margin-top: 0.3rem;"></td>
+                            <td><input onchange="changezCurseur();" type="radio" class="form-check-input" value="Non Concerné" name="clarteExplications_accompagnement_psychologueProfessionnel"  style="padding: 0;margin: 0;margin-top: 0.3rem;"></td>
                         </tr>
                         <tr>
                             <td style="text-align: initial">des délais pour les rendez-vous auprès du conseiller en insertion professionnel</td>
-                            <td><input type="radio" class="form-check-input" value="Tout à fait d'accord" name="delaisRDV_accompagnement_psychologueProfessionnel"  style="padding: 0;margin: 0;margin-top: 0.3rem;"></td>
-                            <td><input type="radio" class="form-check-input" value="D'accord" name="delaisRDV_accompagnement_psychologueProfessionnel"  style="padding: 0;margin: 0;margin-top: 0.3rem;"></td>
-                            <td><input type="radio" class="form-check-input" value="Pas d'accord" name="delaisRDV_accompagnement_psychologueProfessionnel"  style="padding: 0;margin: 0;margin-top: 0.3rem;"></td>
-                            <td><input type="radio" class="form-check-input" value="Non Concerné" name="delaisRDV_accompagnement_psychologueProfessionnel"  style="padding: 0;margin: 0;margin-top: 0.3rem;"></td>
+                            <td><input onchange="changezCurseur();" type="radio" class="form-check-input" value="Tout à fait d'accord" name="delaisRDV_accompagnement_psychologueProfessionnel"  style="padding: 0;margin: 0;margin-top: 0.3rem;"></td>
+                            <td><input onchange="changezCurseur();" type="radio" class="form-check-input" value="D'accord" name="delaisRDV_accompagnement_psychologueProfessionnel"  style="padding: 0;margin: 0;margin-top: 0.3rem;"></td>
+                            <td><input onchange="changezCurseur();" type="radio" class="form-check-input" value="Pas d'accord" name="delaisRDV_accompagnement_psychologueProfessionnel"  style="padding: 0;margin: 0;margin-top: 0.3rem;"></td>
+                            <td><input onchange="changezCurseur();" type="radio" class="form-check-input" value="Non Concerné" name="delaisRDV_accompagnement_psychologueProfessionnel"  style="padding: 0;margin: 0;margin-top: 0.3rem;"></td>
                         </tr>
                         <tr>
                             <td style="text-align: initial">des informations délivrées par le conseiller en insertion professionnel pour la recherche de stage et / ou recherche d’emploi</td>
-                            <td><input type="radio" class="form-check-input" value="Tout à fait d'accord" name="informationDelivree_accompagnement_psychologueProfessionnel"  style="padding: 0;margin: 0;margin-top: 0.3rem;"></td>
-                            <td><input type="radio" class="form-check-input" value="D'accord" name="informationDelivree_accompagnement_psychologueProfessionnel"  style="padding: 0;margin: 0;margin-top: 0.3rem;"></td>
-                            <td><input type="radio" class="form-check-input" value="Pas d'accord" name="informationDelivree_accompagnement_psychologueProfessionnel"  style="padding: 0;margin: 0;margin-top: 0.3rem;"></td>
-                            <td><input type="radio" class="form-check-input" value="Non Concerné" name="informationDelivree_accompagnement_psychologueProfessionnel"  style="padding: 0;margin: 0;margin-top: 0.3rem;"></td>
+                            <td><input onchange="changezCurseur();" type="radio" class="form-check-input" value="Tout à fait d'accord" name="informationDelivree_accompagnement_psychologueProfessionnel"  style="padding: 0;margin: 0;margin-top: 0.3rem;"></td>
+                            <td><input onchange="changezCurseur();" type="radio" class="form-check-input" value="D'accord" name="informationDelivree_accompagnement_psychologueProfessionnel"  style="padding: 0;margin: 0;margin-top: 0.3rem;"></td>
+                            <td><input onchange="changezCurseur();" type="radio" class="form-check-input" value="Pas d'accord" name="informationDelivree_accompagnement_psychologueProfessionnel"  style="padding: 0;margin: 0;margin-top: 0.3rem;"></td>
+                            <td><input onchange="changezCurseur();" type="radio" class="form-check-input" value="Non Concerné" name="informationDelivree_accompagnement_psychologueProfessionnel"  style="padding: 0;margin: 0;margin-top: 0.3rem;"></td>
                         </tr>
                         <tr>
                             <td style="text-align: initial">des interventions collectives délivrées par le conseiller en insertion professionnel</td>
-                            <td><input type="radio" class="form-check-input" value="Tout à fait d'accord" name="interventionCollective_accompagnement_psychologueProfessionnel"  style="padding: 0;margin: 0;margin-top: 0.3rem;"></td>
-                            <td><input type="radio" class="form-check-input" value="D'accord" name="interventionCollective_accompagnement_psychologueProfessionnel"  style="padding: 0;margin: 0;margin-top: 0.3rem;"></td>
-                            <td><input type="radio" class="form-check-input" value="Pas d'accord" name="interventionCollective_accompagnement_psychologueProfessionnel"  style="padding: 0;margin: 0;margin-top: 0.3rem;"></td>
-                            <td><input type="radio" class="form-check-input" value="Non Concerné" name="interventionCollective_accompagnement_psychologueProfessionnel"  style="padding: 0;margin: 0;margin-top: 0.3rem;"></td>
+                            <td><input onchange="changezCurseur();" type="radio" class="form-check-input" value="Tout à fait d'accord" name="interventionCollective_accompagnement_psychologueProfessionnel"  style="padding: 0;margin: 0;margin-top: 0.3rem;"></td>
+                            <td><input onchange="changezCurseur();" type="radio" class="form-check-input" value="D'accord" name="interventionCollective_accompagnement_psychologueProfessionnel"  style="padding: 0;margin: 0;margin-top: 0.3rem;"></td>
+                            <td><input onchange="changezCurseur();" type="radio" class="form-check-input" value="Pas d'accord" name="interventionCollective_accompagnement_psychologueProfessionnel"  style="padding: 0;margin: 0;margin-top: 0.3rem;"></td>
+                            <td><input onchange="changezCurseur();" type="radio" class="form-check-input" value="Non Concerné" name="interventionCollective_accompagnement_psychologueProfessionnel"  style="padding: 0;margin: 0;margin-top: 0.3rem;"></td>
                         </tr>
                     </tbody>
                 </table>
                 <div class="form-group">
-                    <label>Je souhaite apporter les améliorations suivantes :</label>
+                    <label style="font-style: italic;">Je souhaite apporter les améliorations suivantes :</label>
                     <textarea class="form-control" rows="3" name="amelioration_accompagnement_psychologueProfessionnel" maxlength="200"></textarea>
                 </div>
             </div>
