@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Entity\Utilisateur;
+use App\Repository\AdminRepository;
 use App\Repository\QuestionnaireRepository;
 use App\Repository\UtilisateurRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -84,14 +85,14 @@ class AdminController extends AbstractController
     /**
      * @Route("/generation_code", name="generation_code", methods={"GET", "POST"})
      */
-    public function generation_code(UtilisateurRepository $utilisateurRepository, Request $request): Response
+    public function generation_code(AdminRepository $adminRepository, UtilisateurRepository $utilisateurRepository, Request $request): Response
     {
         $reponseFormulaire = false;
         $codes = array();
         $nb_code_genere = $request->request->get('nb_code_generer');
         if(!empty($nb_code_genere) && $nb_code_genere>0){
             $reponseFormulaire = true;
-            $codes = $this->genererXCodes($utilisateurRepository, $nb_code_genere);
+            $codes = $this->genererXCodes($adminRepository, $utilisateurRepository, $nb_code_genere);
             foreach ($codes as $code){
                 $utilisation = new Utilisateur();
                 $utilisation->setCode($code)
@@ -109,19 +110,20 @@ class AdminController extends AbstractController
         ]);
     }
 
-    public function genererXCodes(UtilisateurRepository $utilisateurRepository, int $nb_code_generer)
+    public function genererXCodes(AdminRepository $adminRepository, UtilisateurRepository $utilisateurRepository, int $nb_code_generer)
     {
         $res = array();
         for($i = 0; $i < $nb_code_generer; $i++){
-            $res[$i] = $this->generer1Code($utilisateurRepository);
+            $res[$i] = $this->generer1Code($adminRepository, $utilisateurRepository);
         }
         return $res;
     }
 
-    public function generer1Code(UtilisateurRepository $utilisateurRepository)
+    public function generer1Code(AdminRepository $adminRepository, UtilisateurRepository $utilisateurRepository)
     {
         $res = "";
         $utilisateurs = $utilisateurRepository->findAll();
+        $admins = $adminRepository->findAll();
         $codeInvalide = true;
         while ($codeInvalide){
             $res = $this->generation();
@@ -131,8 +133,10 @@ class AdminController extends AbstractController
                     $cpt++;
                 }
             }
-            if($res == $this->get('session')->get('code')){
-                $cpt++;
+            foreach ($admins as $admin){
+                if($res == $admin->getCode()){
+                    $cpt++;
+                }
             }
             if($cpt == 0){
                 $codeInvalide = false;
