@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Entity\Utilisateur;
 use App\Repository\QuestionnaireRepository;
 use App\Repository\UtilisateurRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -91,6 +92,14 @@ class AdminController extends AbstractController
         if(!empty($nb_code_genere) && $nb_code_genere>0){
             $reponseFormulaire = true;
             $codes = $this->genererXCodes($utilisateurRepository, $nb_code_genere);
+            foreach ($codes as $code){
+                $utilisation = new Utilisateur();
+                $utilisation->setCode($code)
+                    ->setUtilise(false);
+                $entityManager = $this->getDoctrine()->getManager();
+                $entityManager->persist($utilisation);
+                $entityManager->flush();
+            }
         }
         return $this->render('admin/generationCode.html.twig', [
             'dateActuelle' => new \DateTime(),

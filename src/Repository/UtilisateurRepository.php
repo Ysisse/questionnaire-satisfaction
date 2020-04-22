@@ -47,4 +47,14 @@ class UtilisateurRepository extends ServiceEntityRepository
         ;
     }
     */
+
+    public function findOneByCode($value): ?Utilisateur
+    {
+        return $this->createQueryBuilder('a')
+            ->andWhere('a.code = :val')
+            ->setParameter('val', $value)
+            ->getQuery()
+            ->getOneOrNullResult()
+            ;
+    }
 }

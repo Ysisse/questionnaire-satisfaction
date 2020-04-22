@@ -518,7 +518,6 @@ function verifPage23() {
 
 function passerPageSuivante() {
     validationPage();
-
     if(pageSuivante) {
         togg("question_page_" + page);
         if (page == 1) {
@@ -538,13 +537,14 @@ function passerPageSuivante() {
             page++;
         }
         togg("question_page_" + page);
-        changezCurseur();
         document.getElementById("question_progession").innerHTML = "Progression : page "+page+" sur 23";
         pageSuivante = false;
         if(page == 23){
             document.getElementById("question_passage_droite").style.visibility = "hidden";
             togg("question_confirmation");
         }
+    } else {
+        alert("Veuillez répondre à toutes les questions avant de passer à la suite.")
     }
 }
 
@@ -655,11 +655,10 @@ function validationPage(){
 }
 
 function changezCurseur() {
-    console.log(validationPage());
-    console.log(document.getElementById("question_passage_droite"));
-    if(validationPage()){
+    //ne fonctionne pas
+    /*if(validationPage()){
         document.getElementById("question_passage_droite").style = "color: green;cursor: url(https://dab1nmslvvntp.cloudfront.net/wp-content/uploads/2015/07/1436013803checkbox-1024x1024.jpg), pointer;";
     } else {
         document.getElementById("question_passage_droite").style = "color: red;cursor: not-allowed;";
-    }
+    }*/
 }
