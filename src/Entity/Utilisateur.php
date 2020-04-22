@@ -21,6 +21,11 @@ class Utilisateur
      */
     private $code;
 
+    /**
+     * @ORM\Column(type="boolean")
+     */
+    private $utilise;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -34,6 +39,18 @@ class Utilisateur
     public function setCode(string $code): self
     {
         $this->code = $code;
+
+        return $this;
+    }
+
+    public function getUtilise(): ?bool
+    {
+        return $this->utilise;
+    }
+
+    public function setUtilise(bool $utilise): self
+    {
+        $this->utilise = $utilise;
 
         return $this;
     }
