@@ -12,17 +12,17 @@
                 <div class="col-sm-4">
                     <div class="form-check-inline">
                         <label class="form-check-label">
-                            <input onchange="changezCurseur();" type="radio" class="form-check-input" value="Oui" name="identifieMembre_conseilVieSociale" > Oui
+                            <input onchange="changezCurseur();document.getElementById('satisfaction_conseilVieSociale').style.display = '';" type="radio" class="form-check-input" value="Oui" name="identifieMembre_conseilVieSociale"> Oui
                         </label>
                     </div>
                     <div class="form-check-inline">
                         <label class="form-check-label">
-                            <input onchange="changezCurseur();" type="radio" class="form-check-input" value="Non" name="identifieMembre_conseilVieSociale" > Non
+                            <input onchange="changezCurseur();document.getElementById('satisfaction_conseilVieSociale').style.display = 'none';" type="radio" class="form-check-input" value="Non" name="identifieMembre_conseilVieSociale"> Non
                         </label>
                     </div>
                 </div>
             </div>
-            <div class="col-sm-12" style="margin-top: 1%;">
+            <div class="col-sm-12" style="margin-top: 1%;display: none" id="satisfaction_conseilVieSociale">
                 <label style="font-style: italic;">Estimez votre degré de satisfaction :</label>
                 <table class="table table-sm" style="width: 120%;text-align: center;">
                     <thead>

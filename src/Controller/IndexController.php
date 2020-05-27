@@ -82,11 +82,6 @@ class IndexController extends AbstractController
                 $utilisateur->setUtilise(true);
                 $this->getDoctrine()->getManager()->flush();
 
-                /*$utilisation = new Utilisateur();
-                $utilisation->setCode($code);
-                $entityManager = $this->getDoctrine()->getManager();
-                $entityManager->persist($utilisation);*/
-
                 $question = new Questionnaire();
                 $question->setCode($code)
                     ->setDateRealisation(new \DateTime())
@@ -1015,29 +1010,31 @@ class IndexController extends AbstractController
                 $entityManager = $this->getDoctrine()->getManager();
                 $entityManager->persist($question);
 
-                $question = new Questionnaire();
-                $question->setCode($code)
-                    ->setDateRealisation(new \DateTime())
-                    ->setQuestion("21 - Le Conseil de la Vie Sociale : Les représentants du Conseil de la Vie Sociale me consultent avant les réunions.")
-                    ->setReponse($request->request->get('representantConsultation_conseilVieSociale'));
-                $entityManager = $this->getDoctrine()->getManager();
-                $entityManager->persist($question);
+                if ($request->request->get('identifieMembre_conseilVieSociale') == "Oui") {
+                    $question = new Questionnaire();
+                    $question->setCode($code)
+                        ->setDateRealisation(new \DateTime())
+                        ->setQuestion("21 - Le Conseil de la Vie Sociale : Les représentants du Conseil de la Vie Sociale me consultent avant les réunions.")
+                        ->setReponse($request->request->get('representantConsultation_conseilVieSociale'));
+                    $entityManager = $this->getDoctrine()->getManager();
+                    $entityManager->persist($question);
 
-                $question = new Questionnaire();
-                $question->setCode($code)
-                    ->setDateRealisation(new \DateTime())
-                    ->setQuestion("21 - Le Conseil de la Vie Sociale : Les représentants du Conseil de la Vie Sociale me rapportent ce qui a été dit en réunion.")
-                    ->setReponse($request->request->get('representantRapporter_conseilVieSociale'));
-                $entityManager = $this->getDoctrine()->getManager();
-                $entityManager->persist($question);
+                    $question = new Questionnaire();
+                    $question->setCode($code)
+                        ->setDateRealisation(new \DateTime())
+                        ->setQuestion("21 - Le Conseil de la Vie Sociale : Les représentants du Conseil de la Vie Sociale me rapportent ce qui a été dit en réunion.")
+                        ->setReponse($request->request->get('representantRapporter_conseilVieSociale'));
+                    $entityManager = $this->getDoctrine()->getManager();
+                    $entityManager->persist($question);
 
-                $question = new Questionnaire();
-                $question->setCode($code)
-                    ->setDateRealisation(new \DateTime())
-                    ->setQuestion("21 - Le Conseil de la Vie Sociale : Je souhaite apporter les améliorations suivantes")
-                    ->setReponse($request->request->get('amelioration_conseilVieSociale'));
-                $entityManager = $this->getDoctrine()->getManager();
-                $entityManager->persist($question);
+                    $question = new Questionnaire();
+                    $question->setCode($code)
+                        ->setDateRealisation(new \DateTime())
+                        ->setQuestion("21 - Le Conseil de la Vie Sociale : Je souhaite apporter les améliorations suivantes")
+                        ->setReponse($request->request->get('amelioration_conseilVieSociale'));
+                    $entityManager = $this->getDoctrine()->getManager();
+                    $entityManager->persist($question);
+                }
 
                 $question = new Questionnaire();
                 $question->setCode($code)
@@ -1454,24 +1451,34 @@ class IndexController extends AbstractController
                                                                                                                                 }
                                                                                                                                 if($continue){
                                                                                                                                     $identifieMembre_conseilVieSociale = $request->request->get('identifieMembre_conseilVieSociale');
-                                                                                                                                    $representantConsultation_conseilVieSociale = $request->request->get('representantConsultation_conseilVieSociale');
-                                                                                                                                    $representantRapporter_conseilVieSociale = $request->request->get('representantRapporter_conseilVieSociale');
                                                                                                                                     if(
-                                                                                                                                        !empty($identifieMembre_conseilVieSociale) &&
-                                                                                                                                        !empty($representantConsultation_conseilVieSociale) &&
-                                                                                                                                        !empty($representantRapporter_conseilVieSociale)
+                                                                                                                                    !empty($identifieMembre_conseilVieSociale)
                                                                                                                                     ) {
-                                                                                                                                        $information_preparationSortieCentre = $request->request->get('information_preparationSortieCentre');
-                                                                                                                                        if(
-                                                                                                                                            !empty($information_preparationSortieCentre)
-                                                                                                                                        ) {
-                                                                                                                                            $maniereGeneral_satisfactionGenerale = $request->request->get('maniereGeneral_satisfactionGenerale');
-                                                                                                                                            $recommenderai_satisfactionGenerale = $request->request->get('recommenderai_satisfactionGenerale');
-                                                                                                                                            if(
-                                                                                                                                                !empty($maniereGeneral_satisfactionGenerale) &&
-                                                                                                                                                !empty($recommenderai_satisfactionGenerale)
+                                                                                                                                        $continue = true;
+                                                                                                                                        if ($identifieMembre_conseilVieSociale == "Oui") {
+                                                                                                                                            $continue = false;
+                                                                                                                                            $representantConsultation_conseilVieSociale = $request->request->get('representantConsultation_conseilVieSociale');
+                                                                                                                                            $representantRapporter_conseilVieSociale = $request->request->get('representantRapporter_conseilVieSociale');
+                                                                                                                                            if (
+                                                                                                                                                !empty($representantConsultation_conseilVieSociale) &&
+                                                                                                                                                !empty($representantRapporter_conseilVieSociale)
                                                                                                                                             ) {
-                                                                                                                                                return true;
+                                                                                                                                                $continue = true;
+                                                                                                                                            }
+                                                                                                                                        }
+                                                                                                                                        if ($continue) {
+                                                                                                                                            $information_preparationSortieCentre = $request->request->get('information_preparationSortieCentre');
+                                                                                                                                            if (
+                                                                                                                                            !empty($information_preparationSortieCentre)
+                                                                                                                                            ) {
+                                                                                                                                                $maniereGeneral_satisfactionGenerale = $request->request->get('maniereGeneral_satisfactionGenerale');
+                                                                                                                                                $recommenderai_satisfactionGenerale = $request->request->get('recommenderai_satisfactionGenerale');
+                                                                                                                                                if (
+                                                                                                                                                    !empty($maniereGeneral_satisfactionGenerale) &&
+                                                                                                                                                    !empty($recommenderai_satisfactionGenerale)
+                                                                                                                                                ) {
+                                                                                                                                                    return true;
+                                                                                                                                                }
                                                                                                                                             }
                                                                                                                                         }
                                                                                                                                     }

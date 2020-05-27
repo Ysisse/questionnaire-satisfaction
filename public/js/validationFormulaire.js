@@ -479,17 +479,27 @@ function verifPage20() {
     return false;
 }
 function verifPage21() {
-    if(
-        document.forms["questionnaire_satisfaction"]["identifieMembre_conseilVieSociale"].value != ""
-        &&
-        document.forms["questionnaire_satisfaction"]["representantConsultation_conseilVieSociale"].value != ""
-        &&
-        document.forms["questionnaire_satisfaction"]["representantRapporter_conseilVieSociale"].value != ""
-    ) {
+    if(document.forms["questionnaire_satisfaction"]["identifieMembre_conseilVieSociale"].value != "")
+        if(document.forms["questionnaire_satisfaction"]["identifieMembre_conseilVieSociale"].value == "Oui")
+        {
+            if(document.forms["questionnaire_satisfaction"]["representantConsultation_conseilVieSociale"].value != ""
+                &&
+                document.forms["questionnaire_satisfaction"]["representantRapporter_conseilVieSociale"].value != "")
+            {
+                pageSuivante = true;
+                return true;
+            } else {
+                pageSuivante = false;
+                return false;
+            }
+        } else {
+            pageSuivante = true;
+            return true;
+        }
+    {
         pageSuivante = true;
         return true;
     }
-    pageSuivante = false;
     return false;
 }
 function verifPage22() {
@@ -517,8 +527,7 @@ function verifPage23() {
 }
 
 function passerPageSuivante() {
-    validationPage();
-    if(pageSuivante) {
+    if(validationPage()) {
         togg("question_page_" + page);
         if (page == 1) {
             document.getElementById("question_passage_gauche").style.visibility = "";
@@ -538,7 +547,6 @@ function passerPageSuivante() {
         }
         togg("question_page_" + page);
         document.getElementById("question_progession").innerHTML = "Progression : page "+page+" sur 23";
-        pageSuivante = false;
         if(page == 23){
             document.getElementById("question_passage_droite").style.visibility = "hidden";
             togg("question_confirmation");
