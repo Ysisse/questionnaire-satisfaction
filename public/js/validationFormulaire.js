@@ -488,9 +488,6 @@ function verifPage21() {
             {
                 pageSuivante = true;
                 return true;
-            } else {
-                pageSuivante = false;
-                return false;
             }
         } else {
             pageSuivante = true;
@@ -500,6 +497,7 @@ function verifPage21() {
         pageSuivante = true;
         return true;
     }
+    pageSuivante = false;
     return false;
 }
 function verifPage22() {
