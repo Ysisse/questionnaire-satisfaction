@@ -480,6 +480,7 @@ function verifPage20() {
 }
 function verifPage21() {
     if(document.forms["questionnaire_satisfaction"]["identifieMembre_conseilVieSociale"].value != "")
+    {
         if(document.forms["questionnaire_satisfaction"]["identifieMembre_conseilVieSociale"].value == "Oui")
         {
             if(document.forms["questionnaire_satisfaction"]["representantConsultation_conseilVieSociale"].value != ""
@@ -488,12 +489,14 @@ function verifPage21() {
             {
                 pageSuivante = true;
                 return true;
+            } else {
+                pageSuivante = false;
+                return false;
             }
         } else {
             pageSuivante = true;
             return true;
         }
-    {
         pageSuivante = true;
         return true;
     }
