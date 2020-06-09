@@ -70,7 +70,6 @@ class IndexController extends AbstractController
         }
         $this->get('session')->set('repondreQuestionnaire', false);
         $formulaireValider = false;
-
         if($this->verifFormulaire($request)) {
             $formulaireValider = true;
             if ($this->get('session')->get('codeTest')) {
@@ -1113,7 +1112,7 @@ class IndexController extends AbstractController
                         $conseillerCapEmploi_decouvertEtablissement = $request->request->get('conseillerCapEmploi_decouvertEtablissement');
                         $conseillerPoleEmploi_decouvertEtablissement = $request->request->get('conseillerPoleEmploi_decouvertEtablissement');
                         $autre_decouvertEtablissement = $request->request->get('autre_decouvertEtablissement');
-                        $decouvertEtablissement_autre_input = $request->request->get('decouvertEtablissement_autre_input');
+                        $decouvertEtablissement_autre = $request->request->get('decouvertEtablissement_autre');
                         if(
                             !empty($MDPH_decouvertEtablissement) ||
                             !empty($internet_decouvertEtablissement) ||
@@ -1122,7 +1121,7 @@ class IndexController extends AbstractController
                             !empty($conseillerPoleEmploi_decouvertEtablissement) ||
                             (
                                 !empty($autre_decouvertEtablissement) &&
-                                !empty($decouvertEtablissement_autre_input)
+                                !empty($decouvertEtablissement_autre)
                             )
                         ){
                             $beneficie_preAccueil = $request->request->get('beneficie_preAccueil');
