@@ -1,4 +1,4 @@
-var page = 1;
+﻿var page = 1;
 
 var pageSuivante = false;
 
@@ -470,7 +470,10 @@ function verifPage20() {
             if(document.forms["questionnaire_satisfaction"]["formation_securite"].value != ""){
                 pageSuivante = true;
                 return true;
-            }
+            } else {
+		pageSuivante = false;
+    		return false;
+	    }
         }
         pageSuivante = true;
         return true;
