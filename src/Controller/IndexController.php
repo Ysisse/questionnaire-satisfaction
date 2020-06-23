@@ -369,7 +369,7 @@ class IndexController extends AbstractController
                 $question->setCode($code)
                     ->setDateRealisation(new \DateTime())
                     ->setQuestion("8 - Le dispositif suivi / La formation suivie : Je souhaite apporter les améliorations suivantes")
-                    ->setReponse($request->request->get('amelioration_preAccueil'));
+                    ->setReponse($request->request->get('amelioration_formationSuivie'));
                 $entityManager = $this->getDoctrine()->getManager();
                 $entityManager->persist($question);
 
@@ -979,16 +979,16 @@ class IndexController extends AbstractController
                 $question->setCode($code)
                     ->setDateRealisation(new \DateTime())
                     ->setQuestion("20 - La sécurité : J’ai bénéficié d’une formation incendie ?")
-                    ->setReponse($request->request->get('prestation_transport'));
+                    ->setReponse($request->request->get('beneficie_securite'));
                 $entityManager = $this->getDoctrine()->getManager();
                 $entityManager->persist($question);
 
-                if ($request->request->get('prestation_transport') == "Oui") {
+                if ($request->request->get('beneficie_securite') == "Oui") {
                     $question = new Questionnaire();
                     $question->setCode($code)
                         ->setDateRealisation(new \DateTime())
                         ->setQuestion("20 - La sécurité : Je suis satisfait(e) de la formation incendie dispensée par le référent qualité / sécurité")
-                        ->setReponse($request->request->get('amelioration_transport'));
+                        ->setReponse($request->request->get('formation_securite'));
                     $entityManager = $this->getDoctrine()->getManager();
                     $entityManager->persist($question);
 
@@ -996,7 +996,7 @@ class IndexController extends AbstractController
                     $question->setCode($code)
                         ->setDateRealisation(new \DateTime())
                         ->setQuestion("20 - La sécurité : Je souhaite apporter les améliorations suivantes")
-                        ->setReponse($request->request->get('amelioration_transport'));
+                        ->setReponse($request->request->get('amelioration_securite'));
                     $entityManager = $this->getDoctrine()->getManager();
                     $entityManager->persist($question);
                 }
@@ -1039,7 +1039,7 @@ class IndexController extends AbstractController
                 $question->setCode($code)
                     ->setDateRealisation(new \DateTime())
                     ->setQuestion("22 - Préparation de la sortie du centre : Je suis satisfait(e) des informations reçues pour me préparer à la sortie du centre")
-                    ->setReponse($request->request->get('amelioration_conseilVieSociale'));
+                    ->setReponse($request->request->get('information_preparationSortieCentre'));
                 $entityManager = $this->getDoctrine()->getManager();
                 $entityManager->persist($question);
 
@@ -1235,7 +1235,7 @@ class IndexController extends AbstractController
                                                                 $accompagnementRealise_accompagnement_psychologueClinicienne = $request->request->get('accompagnementRealise_accompagnement_psychologueClinicienne');
                                                                 $ecoutePsychologueClinicienne_accompagnement_psychologueClinicienne = $request->request->get('ecoutePsychologueClinicienne_accompagnement_psychologueClinicienne');
                                                                 $clarteExplications_accompagnement_psychologueClinicienne = $request->request->get('clarteExplications_accompagnement_psychologueClinicienne');
-                                                                $delaisRDV_accompagnement_psychologueClinicienne = $request->request->get('delaisRDV_accompagnement_assistanceSociale');
+                                                                $delaisRDV_accompagnement_psychologueClinicienne = $request->request->get('delaisRDV_accompagnement_psychologueClinicienne');
                                                                 if (
                                                                     !empty($accompagnementRealise_accompagnement_psychologueClinicienne) &&
                                                                     !empty($ecoutePsychologueClinicienne_accompagnement_psychologueClinicienne) &&
@@ -1258,7 +1258,7 @@ class IndexController extends AbstractController
                                                                         $accompagnementRealise_accompagnement_psychologueTravail = $request->request->get('accompagnementRealise_accompagnement_psychologueTravail');
                                                                         $ecoutePsychologueTravail_accompagnement_psychologueTravail = $request->request->get('ecoutePsychologueTravail_accompagnement_psychologueTravail');
                                                                         $clarteExplications_accompagnement_psychologueTravail = $request->request->get('clarteExplications_accompagnement_psychologueTravail');
-                                                                        $delaisRDV_accompagnement_psychologueTravail = $request->request->get('delaisRDV_accompagnement_assistanceSociale');
+                                                                        $delaisRDV_accompagnement_psychologueTravail = $request->request->get('delaisRDV_accompagnement_psychologueTravail');
                                                                         if (
                                                                             !empty($accompagnementRealise_accompagnement_psychologueTravail) &&
                                                                             !empty($ecoutePsychologueTravail_accompagnement_psychologueTravail) &&
